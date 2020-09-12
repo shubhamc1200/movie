@@ -1,0 +1,32 @@
+{%extends 'base_layout.html'%}
+{%block content%}
+{%load static%}
+
+<div class="movie-detail">
+
+  <div class="container">
+    <iframe  height="650" src="{{movie.movie_url}}"></iframe> <!-- not mentioned width as iframe has 99% of containers width -->
+      <img class="thumb thumbnail"  src="{{movie.thumb.url}}">
+      <h2 class="movie_title">{{movie.title}}</h2>
+      <p class="body_details">{{movie.body}}</p>
+
+<button type="button"><a class="btn" href="{% url 'movies:add_comment_to_movie' slug=movie.slug %}">Add comment</a></button>
+{%if request.session.superuser %}
+<button type="button"><a class="btn" href="{% url 'movies:update' slug=movie.slug %}">Update</a></button>
+<button type="button"><a class="btn" href="{% url 'movies:delete' slug=movie.slug %}">Delete</a></button>
+{%endif%}
+<div class="comments">
+  {% for comment in movie.comments.all %}
+      <div class="comment">
+          <img class="user_image" src="{%static 'user.png'%}" alt="user"><strong  class="author_comment"> {{comment.author}} </strong>
+          {{comment.created_date}}
+          <p>{{ comment.text|linebreaks }}</p>
+      </div>
+      {%endfor%}
+</div>
+
+</div>
+</div>
+
+
+{%endblock%}

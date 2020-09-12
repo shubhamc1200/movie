@@ -1,0 +1,27 @@
+{%extends 'base_layout.html'%}
+{%block content%}
+<!DOCTYPE html>
+
+  {%if messg %}
+  <script>
+    alert('{{messg}}');
+  </script>
+  {%endif%}
+  <body>
+    <h2>SIGN UP:</h2>
+    <div class="container">
+      <form  action="{%url 'accounts:postsignup'%}" method="post">
+        {%csrf_token%}
+        NAME :
+        <input type="text" name="name"><br><br>
+      EMAIL :
+      <input type="email" name="email"><br><br>
+      PASSWORD:
+      <input type="password" name="pass1" > <br><br>
+      PASSWORD CONFIRMATION:
+      <input type="password" name="pass2" > <br><br>
+      <input type="submit" name="" value="SignUp">
+      </form>
+
+    </div>
+{%endblock%}

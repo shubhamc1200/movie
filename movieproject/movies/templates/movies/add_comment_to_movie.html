@@ -1,0 +1,21 @@
+{%extends 'base_layout.html'%}
+{%block content%}
+
+{%if request.session.logged%} <!-- user must be authenticated to add comments -->
+<div class="containerbox">
+<h1  >New comment:</h1>
+   <form method="POST" class=" commentbox post-form">{% csrf_token %}
+       {{ form }}
+       <button type="submit" class="comment_btn save_btn">Save</button>
+   </form>
+</div>
+
+{%else%}
+
+<div>Already have an account?</div>
+<button type="button"><a href="{%url 'accounts:signIn'%}">SIGNIN</a></button>
+<div>New to MovieTime?</div>
+<button type="button"><a href="{%url 'accounts:signUp'%}">SIGNUP</a></button>
+
+{%endif%}
+{%endblock%}

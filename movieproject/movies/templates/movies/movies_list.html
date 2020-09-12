@@ -1,0 +1,182 @@
+{%extends 'base_layout.html'%}
+{%block content%}
+{%load static%}
+  <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="4"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="5"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{%static 'action.jpg'%}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Action</h5>
+
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{%static 'horror.jpg'%}" class="d-block w-100" alt="ttt">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Horror</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{%static 'scifi.jpg'%}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Scifi</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{%static 'drama.jpg'%}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Drama</h5>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="{%static 'thriller.jfif'%}" class="d-block w-100" alt="...">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Thriller</h5>
+        </div>
+      </div>
+    <div class="carousel-item">
+      <img src="{%static 'anime.jpg'%}" class="d-block w-100" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Anime</h5>
+      </div>
+    </div>
+  </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only"></span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+    <div class="container">
+
+      <div class="moviegenretitle">
+      <h2>DRAMA</h2>
+      </div>
+        <div class="row">
+        {%for movie in movies%}
+          {%if movie.genre == 'Drama' %}
+          <div class="mx-auto">
+            <div class="cont">  <!--created contier to relaatively adjust the text title over image thumbnail -->
+            <a href="{%url 'movies:details' slug=movie.slug%}">
+          <img class="thumb" src="{{movie.thumb.url}}">
+          <a class='bottom' href="{%url 'movies:details' slug=movie.slug%}">{{movie.title}}</a>
+          </a>
+          </div>
+          </div>
+        {%endif%}
+        {%endfor%}
+        </div>
+        <br>
+
+        <div class="moviegenretitle">
+        <h2>ACTION</h2>
+        </div>
+          <div class="row">
+          {%for movie in movies%}
+            {%if movie.genre == 'Action' %}
+          <div class="mx-auto">
+            <div class="cont">
+              <a href="{%url 'movies:details' slug=movie.slug%}">
+            <img class="thumb" src="{{movie.thumb.url}}">
+            <a class='bottom' href="{%url 'movies:details' slug=movie.slug%}">{{movie.title}}</a>
+            </a>
+            </div>
+            </div>
+          {%endif%}
+          {%endfor%}
+          </div>
+          <br>
+
+          <div class="moviegenretitle">
+          <h2>SCIFI</h2>
+          </div>
+            <div class="row">
+            {%for movie in movies%}
+              {%if movie.genre == 'Scifi' %}
+            <div class="mx-auto">
+              <div class="cont">
+                <a href="{%url 'movies:details' slug=movie.slug%}">
+              <img class="thumb" src="{{movie.thumb.url}}">
+              <a class='bottom' href="{%url 'movies:details' slug=movie.slug%}">{{movie.title}}</a>
+              </a>
+              </div>
+              </div>
+            {%endif%}
+            {%endfor%}
+            </div>
+            <br>
+
+            <div class="moviegenretitle">
+            <h2>THRILER</h2>
+            </div>
+              <div class="row">
+              {%for movie in movies%}
+                {%if movie.genre == 'Thriller' %}
+                <div class="mx-auto">
+                <div class="cont">
+                  <a href="{%url 'movies:details' slug=movie.slug%}">
+                <img class="thumb" src="{{movie.thumb.url}}">
+                <a class='bottom' href="{%url 'movies:details' slug=movie.slug%}">{{movie.title}}</a>
+                </a>
+                </div>
+                </div>
+              {%endif%}
+              {%endfor%}
+              </div>
+              <br>
+
+              <div class="moviegenretitle">
+              <h2>HORROR</h2>
+              </div>
+                <div class="row">
+                {%for movie in movies%}
+                  {%if movie.genre == 'Horror' %}
+                  <div class="mx-auto">
+                  <div class="cont">
+                    <a href="{%url 'movies:details' slug=movie.slug%}">
+                  <img class="thumb" src="{{movie.thumb.url}}">
+                  <a class='bottom' href="{%url 'movies:details' slug=movie.slug%}">{{movie.title}}</a>
+                  </a>
+                  </div>
+                  </div>
+                {%endif%}
+                {%endfor%}
+                </div>
+                <br>
+
+                  <div class="moviegenretitle">
+                  <h2>ANIME</h2>
+                  </div>
+                    <div class="row">
+                    {%for movie in movies%}
+                      {%if movie.genre == 'Anime' %}
+                      <div class="mx-auto">
+                      <div class="cont">
+                        <a href="{%url 'movies:details' slug=movie.slug%}">
+                      <img class="thumb" src="{{movie.thumb.url}}">
+                      <a class='bottom' href="{%url 'movies:details' slug=movie.slug%}">{{movie.title}}</a>
+                      </a>
+                      </div>
+                      </div>
+                    {%endif%}
+                    {%endfor%}
+                    </div>
+                    <br>
+
+        </div>
+        <!-- container ends -->
+
+
+{%endblock%}

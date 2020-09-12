@@ -1,0 +1,241 @@
+html{
+  height: 100vh;
+}
+body {
+    background-color:#1e2129;
+    background-repeat-y: no-repeat;
+    color: #fff;
+    font-family: Roboto,sans-serif;
+    height: 100vh;
+}
+.page_wrapper{
+  position: relative;
+  height: 100vh;
+}
+ *{
+  font-family: Roboto,sans-serif;
+  box-sizing: border-box;
+}
+.Movietime_logo{
+  margin-top: 10px;
+}
+img{
+height=50px;
+}
+
+h1, h2, h3, h4, h5{
+    font-weight: normal;
+    margin: 0;
+}
+
+a, a:hover, a:visited{
+    color: #fff;
+    text-decoration: none;
+}
+.btn{
+  color: white;
+}
+button{
+  background: #3863c6;
+  padding: 6px 12px;
+  border:none;
+  font-size: 13px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  font-weight: 400;
+  color:white;
+}
+.wrapper {
+    max-width: 1200px;
+    margin: 0px auto;
+    margin-bottom: 10px;
+}
+header{
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+.{
+  background: rgb(30,33,41);
+background: linear-gradient(0deg, rgba(30,33,41,1) 0%, rgba(0,0,0,1) 100%);
+}
+nav{
+  justify-self: end;
+  margin-top:10px;
+}
+
+nav li{
+    display: inline-block;
+    list-style-type: none;
+    margin-left: 20px;
+}
+
+.carousel-item {
+  height: 480px;
+}
+/* carousel image blur */
+img.d-block {
+  opacity: 0.5;
+}
+
+.container{
+  padding: 0 10px 0 10px;
+}
+
+.moviegenretitle{
+  color: #00acc1;
+  margin: 15px 0 15px 0;
+}
+h2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+.movie_wrapper{
+  display: block;
+ margin-left: auto;
+ margin-right: auto;
+ border: none;
+ display: block;
+ box-sizing: border-box;
+ padding: 25px 0;
+}
+
+.thumb{
+  width: 145px;
+  height: 200px;
+  border-radius:5px;
+}
+.errorlist li{
+    padding: 10px;
+    list-style-type: none;
+    border: 1px solid #FF5722;
+    margin: 10px 0;
+    color: #FF5722
+}
+
+.thisfieldisrequired{
+  display: none;
+}
+.errorlist{
+    padding: 0;
+}
+.cont{
+  position: relative;
+    text-align: center;
+    color: white;
+  }
+  .bottom {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 5px;
+    color: #fff;
+    text-align: center;
+    font-weight: 400;
+    font-size: 1rem;
+}
+a.bottom{
+  background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,254,253,0) 100%);
+font-family: Roboto,sans-serif;
+font-size: 13px;
+}
+
+
+.comment {
+    margin: 20px 0px 20px 20px;
+}
+.author_comment{
+  font-family: 'Roboto', sans-serif;
+      font-size: 1.5rem;
+      margin-right: 10px;
+}
+iframe{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  margin:0 0 30px 0;
+  width:99%;  /* 99% of containers width
+   /* Width of block should be less than 100%, else the element will take up the whole available width of its parent element:quora */
+}
+.thumbnail{
+  float:left;
+  margin-right: 30px;
+}
+.movie_title{
+  color:#6896ff;
+}
+.comment{
+margin-top:40px;
+}
+.comments{
+  margin-top: 120px;
+  margin-bottom: 50px;
+  background-color:#292d38;
+  padding: 20px;
+
+}
+.user_image{
+  width:50px;
+  border-radius: 100px;
+}
+.commentboxdiv{
+  text-align: center;
+  margin-bottom: 20px;
+}
+textarea#id_text{
+margin-top: 20px;
+border: none;
+width: 1000px;
+height: 500px;
+}
+.save_btn{
+  width: 1000px;
+  height:50px;
+  font-size: 20px;
+}
+h2,h1{
+  text-align: center;
+
+}
+input[type=text], input[type=password],input[type=url],input[type=file],input[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0 0px 0;
+  display: block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  text-align: center;
+}
+input[type=file]{
+  border: none;
+  padding: 0px;
+}
+input[type=submit]{
+  background: #3863c6;
+  padding: 6px 12px;
+  border:none;
+  font-size: 13px;
+  border-radius: 3px;
+  border: 1px solid transparent;
+  font-weight: 400;
+  color:white;
+}
+textarea#id_body{
+  display: block;
+  padding: 12px 20px;
+  margin: 8px 0 20px 0;
+}
+.helptext{
+  display: none;
+
+}
+select{
+  display: block;
+    margin: 8px 0 20px 0;
+}
+.containerbox{
+  text-align: center;
+}

@@ -1,0 +1,14 @@
+{%extends 'base_layout.html'%}
+{%block content%}
+
+<div class="create-movie">
+<div class="container">
+<h2>Update the Movie:</h2>
+<form class="site-form" action="{%url 'movies:update' slug=movie.slug%}" method="post"  enctype="multipart/form-data">
+{%csrf_token%}
+{{form}}
+<input type="submit"  value="Update">
+</form>
+</div>
+</div>
+{%endblock%}
